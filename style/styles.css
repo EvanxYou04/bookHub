@@ -1,10 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Oxygen&display=swap");
+:root {
+    --primary-dark: #1b262c;
+    --primary-main: #0f4c75;
+    --secondary-main: #3282b8;
+    --primary-light: #bbe1fa;
+}
 body {
-  font-family: "Oxygen", sans-serif;
-  font-size: 16px;
+    font-family: "Oxygen", sans-serif;
+    font-size: 16px;
 }
 .title {
-  margin-top: 1rem;
-  font-size: 3rem;
-  text-align: center;
+    margin-top: 1rem;
+    font-size: 3rem;
+    text-align: center;
 }
