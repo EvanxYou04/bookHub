@@ -29,3 +29,7 @@ function toogleModal() {
 function addBookToLibrary() {
     // add object Book to myLibrary
 }
+
+const myBook = new Book("The Hobbit", "J.R.R. Tolkien", 295, true);
+myLibrary.push(myBook);
+console.log(myLibrary);
