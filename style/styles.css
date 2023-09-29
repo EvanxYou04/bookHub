@@ -99,18 +99,21 @@ body {
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
-.bookGrid {
+.book-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 1rem;
     margin: 1rem;
 }
-.bookCard {
+.book-card {
     display: flex;
     flex-direction: column;
+    width: 20ch;
+    height: auto;
     background-color: var(--secondary-light);
     border-radius: 0.5rem;
     margin: 1rem;
-    padding: 1rem;
+    padding: 2rem;
+    gap: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }

@@ -32,4 +32,22 @@ function addBookToLibrary() {
 
 const myBook = new Book("The Hobbit", "J.R.R. Tolkien", 295, true);
 myLibrary.push(myBook);
-console.log(myLibrary);
+myLibrary.forEach((book) => {
+    const bookCard = document.createElement("div");
+    const title = document.createElement("p");
+    const author = document.createElement("p");
+    const pages = document.createElement("p");
+    const read = document.createElement("p");
+
+    bookCard.classList.add("book-card");
+
+    title.textContent = book.title;
+    author.textContent = book.author;
+    pages.textContent = book.pages;
+    read.textContent = book.read;
+    bookCard.appendChild(title);
+    bookCard.appendChild(author);
+    bookCard.appendChild(pages);
+    bookCard.appendChild(read);
+    document.querySelector(".book-grid").appendChild(bookCard);
+});
