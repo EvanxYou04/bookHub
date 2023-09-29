@@ -29,7 +29,28 @@
             <div class="modal">
                 <div class="modal-content">
                     <span class="close-button">&times;</span>
-                    <h1>Hello, I am a modal!</h1>
+                    <h1>Add a book to your library!</h1>
+                    <span class="input-title">
+                        <input type="text" id="title" placeholder="Title" />
+                    </span>
+                    <span class="input-author">
+                        <input type="text" id="author" placeholder="Author" />
+                    </span>
+                    <span class="input-page">
+                        <input type="number" id="pages" placeholder="Pages" />
+                    </span>
+                    <span class="input-read">
+                        <input
+                            type="checkbox"
+                            name="haveRead"
+                            id="haveRead"
+                            class="regular-checkbox"
+                        />
+                        <label for="haveRead">Have read book</label>
+                    </span>
+                    <span class="update-books">
+                        <button class="btn" id="updateBook">Add Book</button>
+                    </span>
                 </div>
             </div>
         </main>
