@@ -160,3 +160,14 @@ input[type="number"]:focus {
 span .btn {
     margin: 0.5rem 0;
 }
+
+.book-card button {
+    background-color: var(--secondary-main);
+    border: none;
+    color: var(--secondary-light);
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    font-size: 1.24rem;
+    border-radius: 0.5rem;
+    transition: filter 0.3s ease;
+}
