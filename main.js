@@ -5,6 +5,9 @@ function Book(title, author, pages, read) {
     this.author = author;
     this.pages = pages;
     this.read = read;
+    const remove = () => {
+        myLibrary.splice(myLibrary.indexOf(this), 1);
+    };
 }
 const addButton = document.querySelector("#addBook");
 const modal = document.querySelector(".modal");
@@ -32,7 +35,13 @@ function toogleModal() {
 
 const testBook = new Book("test", "test", 123, true);
 myLibrary.push(testBook);
-displayBook(testBook);
+myLibrary.push(testBook);
+myLibrary.push(testBook);
+myLibrary.push(testBook);
+console.log(myLibrary);
+myLibrary.forEach((book) => {
+    displayBook(book);
+});
 
 //change color of button to green and red when clicked
 const bookCards = document.querySelectorAll(".book-card");
@@ -46,6 +55,13 @@ bookCards.forEach((bookCard) => {
                 : "Have read";
         readButton.style.backgroundColor =
             readButton.textContent === "Have read" ? "green" : "red";
+    });
+    const deleteButton = document.createElement("button");
+    deleteButton.classList.add("delete-button");
+    deleteButton.textContent = "Delete";
+    bookCard.appendChild(deleteButton);
+    deleteButton.addEventListener("click", () => {
+        bookCard.remove();
     });
 });
 
@@ -73,7 +89,7 @@ function displayBook(book) {
     const read = document.createElement("button");
 
     bookCard.classList.add("book-card");
-
+    read.classList.add("read-button");
     title.textContent = book.title;
     author.textContent = book.author;
     pages.textContent = book.pages;
